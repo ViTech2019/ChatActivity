@@ -18,16 +18,12 @@ public class ChatActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
 
-        ArrayList userList = new ArrayList();
-        userList.add("Chips");
-        userList.add("Electricity");
-        userList.add("Lost Souls");
-        userList.add("Wires");
-        userList.add("Disks");
+        String userList[] = {"", "", "", "", "", ""};
+
 
         simpleList = (ListView) findViewById(R.id.simpleListView);
-        ViewListAdapter customAdapter = new ViewListAdapter(getApplicationContext(), userList, context);
-        simpleList.setAdapter(customAdapter);
+        ViewListAdapter viewListAdapter = new ViewListAdapter(getApplicationContext(), userList);
+        simpleList.setAdapter(viewListAdapter);
 
 
     }
